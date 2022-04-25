@@ -106,10 +106,9 @@ print(L)
  
 """
 
-color = ['Red','Green','White','Black','Pink','Yellow']
-
-color.pop(3)
-print("Updated List is ",color)
-
-color[3]='Purple'
-print("Updated List is ",color)
+ccolour=['Red','Green','White','Black','Pink','Yellow']
+colour.remove(colour[3])
+print("Part a question : ",colour)
+colour=['Red','Green','White','Black','Pink','Yellow']
+colour[3:5]=['Purple']
+print("Updated List is",colour)
