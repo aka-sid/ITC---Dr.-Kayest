@@ -104,24 +104,12 @@ print("The value after right shift of a by 2 bits and b with 4 bits is ", a>>2, 
 entered by the user (Print : “Yes” or “No”).
 """
 
-print("\t Question 4")
-
-# Asking for three number to find the greatest number.
-num_1 = int(input("Enter the first number: "))
-num_2 = int(input("Enter the second number: "))
-num_3 = int(input("Enter the third number: "))
-
-# finding the greatest number from the number entered by user.
-if num_1 > num_2 and num_1 > num_3:
-    greatest_num = num_1
-elif num_2 > num_3 and num_2 > num_1:
-    greatest_num = num_2
+print("question 4")
+string = str(input("Enter the string: "))
+if("name" in string):
+    print("Yes\n")
 else:
-    greatest_num = num_3
-
-# printing the greatest interger.
-print("\nThe greatest number is ", greatest_num, "\n")
-
+    print("No\n")
 
 
 
