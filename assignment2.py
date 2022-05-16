@@ -8,40 +8,39 @@ d. Replace “a case sensitive” with “object oriented”.
 e. Find index of substring “a” in the given input string.
 f. Remove the white spaces from the given input string.
 """
-print("\t Question 1")
+print("question 1")
+string = str("Python is a case sensitive language")
+print("INPUT STRING = ",string)
+print("(Answer of a)")
+length=len(string)
+print(length)
+print
 
-input_string = "Python is a case sensitive language"
+#(b)
+print("(Answer of b)")
+reverse_string=string[length::-1]
+print(reverse_string)
 
-# finding and printing the length of string.
-print("Part a")
-length = len(input_string)
-print(length,"\n")
+#(c)
+print("(Answer of c)")
+new_string=string[10:26]
+print(new_string)
 
-# reversing and printing the input string.
-print("Part b")
-reverse = input_string[::-1]
-print(reverse,"\n")
+#(d)
+print("(Answer of d)")
+#replace 'a case sensitive' with 'oject oriented'
+replaced_string=string[0:10]+'object oriented'+string[26:35]
+print(replaced_string)
 
-# slicing and printing the input string.
-print("Part c")
-sliced = input_string[10:26]
-print(sliced,"\n")
+#(e)
+print("(Answer of e)")
+index_a=string.find('a')
+print(index_a)
 
-# replacing a case sensitive with object oriented 
-print("Part d")
-replace_string = input_string.replace("a case sensitive", "object oriented")
-print(replace_string,"\n")
-
-# finding and printing the index of a.
-print("part e")
-index_a = input_string.find("a")
-print(index_a,"\n")
-
-# replacing the white spaces with nothing.
-print("part f")
-replace_space = input_string.replace(" ", "")
-print(replace_space,"\n")
-
+#(f) first check the index of white spaces and then write the new string by not using those index
+print("(Answer of f)")
+remove_whitespaces=string.replace(" ","")
+print(remove_whitespaces)
 
 
 
@@ -57,17 +56,15 @@ My SID is 2110XXXX
 I am from XYZ department and my CGPA is 9.9
 """
 
-print("\t Question 2")
+print("question 2")
+name='Siddharth Kulshrestha'
+SID=21102096
+department_name="Civil"
+CGPA='9.9'
 
-# Initializing the variables.
-name = "Siddharth Kulshrestha"
-sid = 21102096
-deparment_name = "CIVIL"
-cgpa = 9.9
-
-# string formating using format function.
-print("Hey,{} Here! \nMY SID is {} \nI am form {} department and my CGPA is {} \n".format(name,sid,deparment_name,cgpa))
-
+print("Hey,%s Here!"%(name))
+print("My SID is %d"%(SID))
+print("I am from %s department and my CGPA is %s"%(department_name,CGPA))
 
 
 
@@ -83,17 +80,26 @@ d. Left shift both a and b with 2 bits.
 e. Right shift a with 2 bits and b with 4 bits.
 """
 
-print("\t Question 3")
-
+print("question 3")
 a = 56
 b = 10
-
-# preforming some bitwise operations and printing results.
-print("The valus of a&b is ",a&b)
-print("The valus of a|b is ",a|b)
-print("The valus of a^b is ",a^b)
-print("The value after left shift of a and b by 2 bits is ", a<<2, " and ", b<<2, "respectively")
-print("The value after right shift of a by 2 bits and b with 4 bits is ", a>>2, " and ", b>>4, "respectively \n")
+#A
+print("Answer of A")
+print(a & b)
+#B
+print("Answer of B")
+print(a | b)
+#C
+print("Answer of C")
+print(a ^ b)
+# D
+print("Answer of D")
+print(a << 2)
+print(b << 2)
+# E
+print("Answer of E")
+print(a >> 2)
+print(b >> 4)
 
 
 
@@ -116,6 +122,7 @@ else:
 
 
 
+
 """
 5. For any three lengths, there is a simple test to see if it is possible to form a
 triangle. If any of the three lengths is greater than the sum of the other two,
@@ -124,16 +131,16 @@ converts them to integers, and to check whether the given input lengths can
 form a triangle or not (Print : “Yes” or “No”).[Don’t use if else here].
 """
 
-print("\t Question 5")
+print("question 5")
+side_1_of_triangle=int(input("Give a number:"))
+side_2_of_triangle=int(input("Give a number:"))
+side_3_of_triangle=int(input("Give a number:"))
 
-# Asking for a string.
-string_to_check = input("Enter the string: ")
-
-# checking and printing the result whether the name word is present in input string or not.
-if "name" in string_to_check:
-    print("\nYes\n")
+if(side_1_of_triangle+side_2_of_triangle>side_3_of_triangle and side_2_of_triangle+side_3_of_triangle>side_1_of_triangle and side_1_of_triangle+side_3_of_triangle>side_2_of_triangle):
+    print("The triangle is possible")
 else:
-    print("\nNo\n")
+    print("The triangle is not possible")
+
     
     
     
@@ -147,19 +154,26 @@ needed to be flipped to convert ‘a’ to ‘b’.
 """
 
 
-print("\t Question 6")
-
-# Asking for three sides of the triangle.
-side_1 = int(input("Enter the length of first side: "))
-side_2 = int(input("Enter the length of second side: "))
-side_3 = int(input("Enter the length of third side: "))
-
-# Checking whether the triangle is possible or not with sides entered by the user.
-if side_1 > side_2 + side_3:
-    print("\nNo")
-elif side_2 > side_1 + side_3:
-    print("\nNo")
-elif side_3 > side_1 + side_2:
-    print("\nNo")
-else:
-    print("\nYes")
+print("question 6")
+# Count number of bits to be flipped
+# to convert A into B
+ 
+# Function that count set bits
+def countSetBits( n ):
+    count = 0
+    while n:
+        count += 1
+        n &= (n-1)
+    return count
+     
+# Function that return count of
+# flipped number
+def FlippedCount(a , b):
+ 
+    # Return count of set bits in
+    # a XOR b
+    return countSetBits(a^b)
+    
+a=int(input("First no:\n"))
+b=int(input("second no:\n"))
+print(FlippedCount(a,b))
