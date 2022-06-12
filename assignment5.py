@@ -44,3 +44,25 @@ else:
 	print("Triangle not possible")
 	
 	
+#Q4
+
+i=1
+while i<=10:
+	if(i<=5):
+		j=1
+		str=''
+		while(j<=i):
+			str=str+'*'
+			j+=1
+		print(str)
+		i+=1
+	else:
+		j=10
+		str=''
+		while(j>i):
+			str=str+'*'
+			j-=1
+		print(str)
+		i+=1
+		
+		
