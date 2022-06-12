@@ -30,3 +30,17 @@ for i in range(start_range, end_range):
   
 #Q3
 
+import math
+
+a = int(input("Enter side A\n"))
+b = int(input("Enter side B\n"))
+c = int(input("Enter side C\n"))
+
+if (a + b <= c) or (a + c <= b) or (b + c <= a) :
+    s=(a+b+c)/2
+    area=math.sqrt(s*(s-a)*(s-b)*(s-c))
+    print("Area of the triangle is: ",round(area,2))
+else:
+	print("Triangle not possible")
+	
+	
