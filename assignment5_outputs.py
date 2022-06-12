@@ -40,3 +40,16 @@ Enter side B
 Enter side C
 4
 Area of the triangle is:  6.0
+
+  
+#Q4
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
