@@ -28,3 +28,15 @@ Numbers in range  5  to  105  divisible by  7  are:
 84
 91
 98
+
+
+
+#Q3
+
+Enter side A
+5
+Enter side B
+3
+Enter side C
+4
+Area of the triangle is:  6.0
